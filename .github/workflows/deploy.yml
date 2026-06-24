@@ -1,0 +1,86 @@
+name: Deploy Ludoshop
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Check first deployment
+        id: check_deploy
+        run: |
+          if ssh -i ~/.ssh/deploy_key -p "${{ secrets.SSH_PORT }}" \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "test -f /var/www/ludoshop/.github-deployed"; then
+              echo "first_deploy=false" >> $GITHUB_OUTPUT
+          else
+              echo "first_deploy=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: First deployment - copy all files
+        if: steps.check_deploy.outputs.first_deploy == 'true'
+        run: |
+          rsync -avz --delete \
+            --exclude ".git" \
+            --exclude ".github" \
+            --exclude "node_modules" \
+            --exclude ".env" \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/ludoshop/
+
+          ssh -i ~/.ssh/deploy_key -p "${{ secrets.SSH_PORT }}" \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "touch /var/www/ludoshop/.github-deployed"
+
+      - name: Detect changed files
+        if: steps.check_deploy.outputs.first_deploy == 'false'
+        run: |
+          git diff --name-only --diff-filter=ACMR HEAD~1 HEAD > changed-files.txt
+          cat changed-files.txt
+
+      - name: Deploy changed files only
+        if: steps.check_deploy.outputs.first_deploy == 'false'
+        run: |
+          if [ -s changed-files.txt ]; then
+            rsync -avz --relative \
+              --files-from=changed-files.txt \
+              --exclude ".git" \
+              --exclude ".github" \
+              --exclude "node_modules" \
+              --exclude ".env" \
+              -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
+              ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/ludoshop/
+          else
+            echo "No changed files to deploy"
+          fi
+
+      - name: Delete removed files on server
+        if: steps.check_deploy.outputs.first_deploy == 'false'
+        run: |
+          git diff --name-only --diff-filter=D HEAD~1 HEAD > deleted-files.txt
+
+          if [ -s deleted-files.txt ]; then
+            while IFS= read -r file; do
+              ssh -i ~/.ssh/deploy_key -p "${{ secrets.SSH_PORT }}" \
+                ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+                "rm -f '/var/www/ludoshop/$file'"
+            done < deleted-files.txt
+          else
+            echo "No deleted files"
+          fi

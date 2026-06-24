@@ -13,19 +13,25 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-die">🎲</div>
-                LudoShop
+                <div class="logo-die">
+                    <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
+                </div>
+                Forum
             </a>
-
             <ul class="nav-links">
-                <li><a href="catalogue.html">Catalogue</a></li>
                 <li><a href="forum.html">Forum</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
+                <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
             </ul>
-
             <div class="nav-right">
-                <a href="connexion.html">
-                    <button class="btn-nav">Connexion</button>
-                </a>
+                <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
+                <button class="icon-btn" title="Mes envies">♡</button>
+                <a href="panier.html"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
+                    🛒
+                    <span class="cart-badge">3</span></a>
+                </button>
             </div>
         </div>
     </nav>
@@ -178,21 +184,14 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
-
-        <div class="logo" style="font-size:17px">
-            🎲 LudoShop
-        </div>
-
-        <p class="footer-copy">
-            © 2026 LudoShop — Aucun MJ n'a été maltraité.
-        </p>
-
+        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
+        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
         <nav class="footer-links">
             <a href="#">À propos</a>
+            <a href="#">CGV</a>
             <a href="#">Contact</a>
-            <a href="index.html">Accueil</a>
+            <a href="forum.html">Forum</a>
         </nav>
-
     </div>
 </footer>
 

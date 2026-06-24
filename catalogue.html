@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue — LudoShop</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🎲 LudoShop</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="panier.html" class="icon-btn">
+                    🛒
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- SECTION -->
+<section class="section">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">
+                🎲 Catalogue des jeux
+            </h2>
+        </div>
+
+        <!-- FILTRES -->
+        <div class="filters">
+
+            <input type="text" id="search" placeholder="Rechercher un jeu...">
+
+            <select id="category">
+                <option value="all">Toutes catégories</option>
+                <option value="jdr">Jeux de rôle</option>
+                <option value="plateau">Jeux de plateau</option>
+                <option value="figurines">Figurines</option>
+            </select>
+
+        </div>
+
+        <!-- PRODUITS -->
+        <div class="product-grid" id="products">
+
+            <div class="product-card" data-name="cryptes de vaelthar" data-cat="plateau">
+                <div class="product-thumb">🏚️</div>
+                <div class="product-body">
+                    <div class="product-name">Cryptes de Vaelthar</div>
+                    <div class="product-price">42,90 €</div>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="marchands de sorvane" data-cat="plateau">
+                <div class="product-thumb">⚖️</div>
+                <div class="product-body">
+                    <div class="product-name">Marchands de Sorvane</div>
+                    <div class="product-price">34,90 €</div>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="phaedros" data-cat="jdr">
+                <div class="product-thumb">📜</div>
+                <div class="product-body">
+                    <div class="product-name">Légendes de Phaëdros</div>
+                    <div class="product-price">29,90 €</div>
+                </div>
+            </div>
+
+            <div class="product-card" data-name="kaelthorn" data-cat="figurines">
+                <div class="product-thumb">🔨</div>
+                <div class="product-body">
+                    <div class="product-name">Forges de Kaelthorn</div>
+                    <div class="product-price">54,90 €</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p class="footer-copy">© 2026 LudoShop</p>
+    </div>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+const searchInput = document.getElementById("search");
+const categorySelect = document.getElementById("category");
+const products = document.querySelectorAll(".product-card");
+
+function filterProducts() {
+    const search = searchInput.value.toLowerCase();
+    const category = categorySelect.value;
+
+    products.forEach(product => {
+        const name = product.dataset.name;
+        const cat = product.dataset.cat;
+
+        const matchSearch = name.includes(search);
+        const matchCat = category === "all" || cat === category;
+
+        if (matchSearch && matchCat) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+searchInput.addEventListener("input", filterProducts);
+categorySelect.addEventListener("change", filterProducts);
+</script>
+
+</body>
+</html>

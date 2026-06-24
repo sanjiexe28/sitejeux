@@ -13,22 +13,27 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-die">🎲</div>
+                <div class="logo-die">
+                    <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
+                </div>
                 LudoShop
             </a>
-
             <ul class="nav-links">
+                <li><a href="forum.html">Forum</a></li>
                 <li><a href="catalogue.html">Catalogue</a></li>
                 <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
                 <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
                 <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
-                <li><a href="forum.html">Forum</a></li>
             </ul>
-
             <div class="nav-right">
-                <a href="connexion.html">
-                    <button class="btn-nav">Connexion</button>
-                </a>
+                <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
+                <button class="icon-btn" title="Mes envies">♡</button>
+                <a href="panier.html"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
+                    🛒
+                    <span class="cart-badge">3</span></a>
+                </button>
+                <a href="connexion.html"><button class="btn-nav">Connexion</button></a>
+                <a href="inscription.html"><button class="btn-nav">Inscription</button></a>
             </div>
         </div>
     </nav>

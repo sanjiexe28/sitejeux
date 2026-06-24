@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mon panier — LudoShop</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <h1>mange ma bite<h1>
+
+<!-- NAVBAR (copiée depuis ton index) -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">🎲 LudoShop</a>
+            <ul class="nav-links">
+                <li><a href="catalogue.html">Catalogue</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- PANIER -->
+<section class="section">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">
+                🛒 Mon panier
+            </h2>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- PRODUITS -->
+            <div class="cart-items">
+
+                <!-- Produit -->
+                <div class="cart-item">
+                    <div class="cart-thumb">🏚️</div>
+
+                    <div class="cart-info">
+                        <div class="cart-name">Cryptes de Vaelthar</div>
+                        <div class="cart-desc">Dungeon Crawler</div>
+
+                        <div class="cart-actions">
+                            <input type="number" value="1" min="1">
+                            <button class="btn-remove">Supprimer</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-price">42,90 €</div>
+                </div>
+
+                <!-- Produit -->
+                <div class="cart-item">
+                    <div class="cart-thumb">⚖️</div>
+
+                    <div class="cart-info">
+                        <div class="cart-name">Marchands de Sorvane</div>
+                        <div class="cart-desc">Négo & trahison</div>
+
+                        <div class="cart-actions">
+                            <input type="number" value="2" min="1">
+                            <button class="btn-remove">Supprimer</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-price">69,80 €</div>
+                </div>
+
+            </div>
+
+            <!-- RESUME -->
+            <div class="cart-summary">
+
+                <h3>Résumé</h3>
+
+                <div class="summary-line">
+                    <span>Sous-total</span>
+                    <span>112,70 €</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Livraison</span>
+                    <span>Offerte</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>112,70 €</span>
+                </div>
+
+                <button class="btn btn-gold" style="width:100%">
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 LudoShop</p>
+    </div>
+</footer>
+
 </body>
 </html>
+
+<!-- pute -->

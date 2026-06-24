@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LudoShop — La boutique des joueurs (sérieux)</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-die">
+                    <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
+                </div>
+                LudoShop
+            </a>
+            <ul class="nav-links">
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
+                <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <div class="nav-right">
+                <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
+                <button class="icon-btn" title="Mes envies">♡</button>
+                <a href="panier.html"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
+                    🛒
+                    <span class="cart-badge">3</span></a>
+                </button>
+                <a href="connexion.html"><button class="btn-nav">Connexion</button></a>
+                <a href="inscription.html"><button class="btn-nav">Inscription</button></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- BANDEAU DÉFILANT -->
+<div class="fun-banner" aria-hidden="true">
+    <div class="fun-banner-track">
+        <span>Livraison 48h</span>
+        <span>+3 200 jeux en stock</span>
+        <span>Vos amis vous attendent</span>
+        <span>Le plateau ne se plie pas tout seul</span>
+        <span>Points fidélité = vraies récompenses</span>
+        <span>Aucune figurine n'a été blessée lors des tests</span>
+        <span>Le MJ a toujours raison (presque)</span>
+        <span>Livraison 48h</span>
+        <span>+3 200 jeux en stock</span>
+        <span>Vos amis vous attendent</span>
+        <span>Le plateau ne se plie pas tout seul</span>
+        <span>Points fidélité = vraies récompenses</span>
+        <span>Aucune figurine n'a été blessée lors des tests</span>
+        <span>Le MJ a toujours raison (presque)</span>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ La référence des joueurs passionnés</p>
+            <h1 class="hero-title">
+                Votre prochaine<br>
+                <em>grande aventure</em><br>
+                commence ici
+            </h1>
+            <p class="hero-subtitle" id="hero-slogan">
+                Vos proches vous cherchent depuis samedi.<br>
+                Jeux de plateau, JDR, figurines &amp; extensions. Livrés en 48h.
+            </p>
+            <div class="hero-ctas">
+                <a href="catalogue.html"><button class="btn btn-gold">Explorer le catalogue</button></a>
+                <a href="catalogue.html?cat=nouveautes"><button class="btn btn-ghost">Nouveautés →</button></a>
+            </div>
+        </div>
+
+        <div class="hero-cards">
+            <a href="produit.html?id=1" class="hero-game-card">
+                <div class="hero-card-thumb" style="background:#E8DCC8">🏚️</div>
+                <div class="hero-card-info">
+                    <div class="hero-card-name">Cryptes de Vaelthar</div>
+                    <div class="hero-card-price">42,90 €</div>
+                </div>
+            </a>
+            <a href="produit.html?id=2" class="hero-game-card">
+                <div class="hero-card-thumb" style="background:#C8D8E8">⚖️</div>
+                <div class="hero-card-info">
+                    <div class="hero-card-name">Marchands de Sorvane</div>
+                    <div class="hero-card-price">34,90 €</div>
+                </div>
+            </a>
+            <a href="produit.html?id=3" class="hero-game-card">
+                <div class="hero-card-thumb" style="background:#D8C8E8">📜</div>
+                <div class="hero-card-info">
+                    <div class="hero-card-name">Légendes de Phaëdros</div>
+                    <div class="hero-card-price">29,90 €</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stat-item">
+            <div class="stat-num">3 200+</div>
+            <div class="stat-label">Références (et on a tout essayé)</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">12 400</div>
+            <div class="stat-label">Joueurs inscrits</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">48h</div>
+            <div class="stat-label">Livraison (le facteur fait des heures sup)</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">4,8 / 5</div>
+            <div class="stat-label">Satisfaction (le 0,2 c'est notre chat)</div>
+        </div>
+    </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <div class="title-icon">🃏</div>
+                Parcourir par univers
+            </h2>
+        </div>
+        <div class="cat-grid">
+            <a href="catalogue.html?cat=plateau" class="cat-card">
+                <div class="cat-icon">♟️</div>
+                <div class="cat-name">Jeux de plateau</div>
+                <div class="cat-nb">842 références</div>
+            </a>
+            <a href="catalogue.html?cat=jdr" class="cat-card">
+                <div class="cat-icon">🐲</div>
+                <div class="cat-name">Jeux de rôle</div>
+                <div class="cat-nb">367 références</div>
+            </a>
+            <a href="catalogue.html?cat=figurines" class="cat-card">
+                <div class="cat-icon">⚔️</div>
+                <div class="cat-name">Figurines</div>
+                <div class="cat-nb">1 240 références</div>
+            </a>
+            <a href="catalogue.html?cat=cartes" class="cat-card">
+                <div class="cat-icon">🃏</div>
+                <div class="cat-name">Jeux de cartes</div>
+                <div class="cat-nb">520 références</div>
+            </a>
+            <a href="catalogue.html?cat=extensions" class="cat-card">
+                <div class="cat-icon">🧩</div>
+                <div class="cat-name">Extensions</div>
+                <div class="cat-nb">680 références</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- NOUVEAUTES -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <div class="title-icon">✨</div>
+                Dernières arrivées
+            </h2>
+            <a href="catalogue.html?cat=nouveautes" class="link-all">Tout voir →</a>
+        </div>
+        <div class="product-grid">
+
+            <!-- Jeu 1 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#E8DCC8" data-fun="Risque de disputes familiales">
+                    <span>🏚️</span>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Dungeon Crawler</div>
+                    <div class="product-name">Cryptes de Vaelthar</div>
+                    <div class="product-desc">Explorez des cryptes procédurales. Attention au boss final : il triche.</div>
+                    <p class="stock-warning">🔥 Plus que 3 en stock — votre co-joueur regarde déjà</p>
+                    <div class="product-stars">
+                        <span class="stars">★★★★★</span>
+                        <span class="avis-nb">(34 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">42,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 2 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#C8D8E8" data-fun="Amis perdus : 2 en moyenne">
+                    <span>⚖️</span>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Négo &amp; trahison</div>
+                    <div class="product-name">Marchands de Sorvane</div>
+                    <div class="product-desc">Négociez, trahissez, réconciliez-vous à moitié, re-trahissez.</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★½</span>
+                        <span class="avis-nb">(21 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">34,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 3 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#D8C8E8" data-fun="Séance psy incluse">
+                    <span>📜</span>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Jeu de rôle</div>
+                    <div class="product-name">Légendes de Phaëdros</div>
+                    <div class="product-desc">Un JDR narratif où le MJ pleure à chaque session. Par bonheur.</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★★</span>
+                        <span class="avis-nb">(12 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">29,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 4 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#E8CCCC" data-fun="Pinceau non fourni (ni excuse)">
+                    <span>🔨</span>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Figurines</div>
+                    <div class="product-name">Les Forges de Kaelthorn</div>
+                    <div class="product-desc">12 nains forgerons à assembler. Votre genou en retrouvera une sur le sol à 3h du mat.</div>
+                    <p class="stock-warning">🔥 Plus que 1 en stock — votre co-joueur regarde déjà</p>
+                    <div class="product-stars">
+                        <span class="stars">★★★★☆</span>
+                        <span class="avis-nb">(8 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">54,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- POPULAIRES -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <div class="title-icon">🔥</div>
+                Les plus populaires
+            </h2>
+            <a href="catalogue.html?sort=popularite" class="link-all">Tout voir →</a>
+        </div>
+        <div class="product-grid">
+
+            <!-- Jeu 5 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#CCE0CC" data-fun="Table de 2m² recommandée">
+                    <span>🌑</span>
+                    <span class="badge-hot">Top ventes</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Conquête galactique</div>
+                    <div class="product-name">Éclipse de Mirholdt</div>
+                    <div class="product-desc">Contrôlez l'univers entier. Durée de partie : votre week-end.</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★★</span>
+                        <span class="avis-nb">(287 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">49,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 6 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#E4E0CC" data-fun="Coopération testée, approuvée">
+                    <span>🗿</span>
+                    <span class="badge-hot">Top ventes</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Coopératif</div>
+                    <div class="product-name">Ruines de Drakmoor</div>
+                    <div class="product-desc">Le jeu où tout le monde joue ensemble… sauf un qui "donne des conseils".</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★½</span>
+                        <span class="avis-nb">(194 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">37,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 7 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#CCE0E8" data-fun="Pouvoir corrompt. Parfait.">
+                    <span>🏛️</span>
+                    <span class="badge-hot">Top ventes</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Gestion &amp; intrigue</div>
+                    <div class="product-name">Guildes de Nyvara</div>
+                    <div class="product-desc">Bâtissez la guilde la plus puissante. Ou jouez l'assassin dans l'ombre, c'est aussi bien.</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★½</span>
+                        <span class="avis-nb">(156 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">44,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeu 8 -->
+            <div class="product-card">
+                <div class="product-thumb" style="background:#E8D4CC" data-fun="Le MJ a pleuré 3 fois">
+                    <span>⚡</span>
+                    <span class="badge-hot">Top ventes</span>
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">Jeu de rôle</div>
+                    <div class="product-name">L'Éveil des Titan-Rois</div>
+                    <div class="product-desc">Des héros légendaires, des titans millénaires, et un joueur qui regarde son téléphone.</div>
+                    <div class="product-stars">
+                        <span class="stars">★★★★★</span>
+                        <span class="avis-nb">(203 avis)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">32,90 €</span>
+                        <button class="btn-sm btn-panier">+ Panier</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FIDÉLITÉ -->
+<section class="section">
+    <div class="container">
+        <div class="fidelity-banner">
+            <div class="fidelity-icon">⭐</div>
+            <div class="fidelity-text">
+                <div class="fidelity-title">Programme fidélité — gagnez à chaque commande !</div>
+                <div class="fidelity-desc">
+                    1 € dépensé = 10 points. Convertissez-les en bons de réduction.<br>
+                    Parrainez un ami à l'inscription : +200 points pour vous deux. Votre ami vous pardonnera d'avoir fait ça.
+                </div>
+            </div>
+            <a href="fidelite.html"><button class="btn-fidelity">Voir mes points</button></a>
+        </div>
+    </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- FORUM -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <div class="title-icon">💬</div>
+                La communauté en parle
+            </h2>
+            <a href="forum.html" class="link-all">Accéder au forum →</a>
+        </div>
+        <div class="forum-grid">
+
+            <a href="forum.html" class="forum-card">
+                <div class="forum-card-head" style="background:#E8D8CC">🗣️</div>
+                <div class="forum-card-body">
+                    <span class="forum-tag">Conseils</span>
+                    <div class="forum-title">Quel jeu choisir pour une soirée avec des débutants qui "n'aiment pas les jeux de société" ?</div>
+                    <div class="forum-meta">
+                        <span>👤 LudoMaster42</span>
+                        <span>·</span>
+                        <span>24 réponses</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="forum.html" class="forum-card">
+                <div class="forum-card-head" style="background:#CCE0E8">🎨</div>
+                <div class="forum-card-body">
+                    <span class="forum-tag">Peinture</span>
+                    <div class="forum-title">Mes astuces pour peindre les figurines de Kaelthorn sans en mettre partout (spoiler : j'en mets partout)</div>
+                    <div class="forum-meta">
+                        <span>👤 PincelleMagique</span>
+                        <span>·</span>
+                        <span>12 réponses</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="forum.html" class="forum-card">
+                <div class="forum-card-head" style="background:#D8CCE8">🎲</div>
+                <div class="forum-card-body">
+                    <span class="forum-tag">JDR</span>
+                    <div class="forum-title">Notre campagne Phaëdros a duré 10 sessions. Mon perso est mort à la 2e. J'ai quand même continué.</div>
+                    <div class="forum-meta">
+                        <span>👤 DungeonKing</span>
+                        <span>·</span>
+                        <span>31 réponses</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- EASTER EGG — lancé de dé -->
+<div class="egg-overlay" id="egg-overlay">
+    <div class="egg-box">
+        <button class="egg-close" onclick="closeEgg()">✕</button>
+        <div class="egg-emoji" id="egg-emoji">🎲</div>
+        <h3 id="egg-title">Vous avez lancé le dé !</h3>
+        <p id="egg-text">…</p>
+        <button class="btn btn-purple" onclick="closeEgg()">Compris, j'achète quand même</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
+        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
+        <nav class="footer-links">
+            <a href="#">À propos</a>
+            <a href="#">CGV</a>
+            <a href="#">Contact</a>
+            <a href="forum.html">Forum</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    // --- Slogans aléatoires dans le hero ---
+    const slogans = [
+        "Vos proches vous cherchent depuis samedi.",
+        "Parce que perdre entre amis, c'est quand même mieux que gagner seul.",
+        "Niveau règles : de 'facile' à 'on a besoin d'un doctorat'.",
+        "Le bon côté des jeux de plateau : on éteint les écrans... pour regarder des cartes.",
+        "Avertissement : peut provoquer des soirées qui finissent à 3h du matin.",
+    ];
+    const slogan = slogans[Math.floor(Math.random() * slogans.length)];
+    document.getElementById('hero-slogan').innerHTML =
+        slogan + '<br>Jeux de plateau, JDR, figurines &amp; extensions. Livrés en 48h.';
+
+    // --- Easter egg : lancé de dé ---
+    const resultats = [
+        { emoji: '⚀', titre: 'Résultat : 1', texte: 'Vous commencez la partie. Directement dernier. Bonne chance.' },
+        { emoji: '⚁', titre: 'Résultat : 2', texte: 'Presque bien. Votre co-joueur a fait 12 au premier lancé. Dommage.' },
+        { emoji: '⚂', titre: 'Résultat : 3', texte: 'Moyen. Comme la météo. Comme le café de bureau. Recommencez.' },
+        { emoji: '⚃', titre: 'Résultat : 4', texte: 'Pas mal ! Votre adversaire a fait 5. Recommencez encore.' },
+        { emoji: '⚄', titre: 'Résultat : 5', texte: 'Excellent ! Mais votre voisin vient de faire un 6. Cruel.' },
+        { emoji: '⚅', titre: 'CRITIQUE — Résultat : 6 !', texte: '🎉 Maximum absolu ! Vous pouvez vous vanter pendant exactement 4 minutes avant que quelqu\'un batte votre score.' },
+    ];
+
+    const die = document.getElementById('shake-die');
+    const overlay = document.getElementById('egg-overlay');
+
+    die.addEventListener('click', () => {
+        die.classList.add('shaking');
+        setTimeout(() => die.classList.remove('shaking'), 500);
+        const r = resultats[Math.floor(Math.random() * resultats.length)];
+        document.getElementById('egg-emoji').textContent = r.emoji;
+        document.getElementById('egg-title').textContent  = r.titre;
+        document.getElementById('egg-text').textContent   = r.texte;
+        overlay.classList.add('open');
+    });
+
+    function closeEgg() { overlay.classList.remove('open'); }
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeEgg(); });
+
+    // --- Slogan au hover du logo ---
+    const logoSlogans = [
+        "Votre porte-monnaie tremble déjà.",
+        "On ne juge pas les 47 jeux dans votre placard.",
+        "Règles lues : 0. Partie lancée : 1.",
+        "Votre famille commence à s'inquiéter.",
+    ];
+    document.querySelector('.logo').addEventListener('mouseenter', function() {
+        this.title = logoSlogans[Math.floor(Math.random() * logoSlogans.length)];
+    });
+
+    // --- Boutons panier avec feedback ---
+    document.querySelectorAll('.btn-panier').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const original = this.textContent;
+            this.textContent = '✓ Ajouté !';
+            this.style.background = '#2E7D32';
+            setTimeout(() => {
+                this.textContent = original;
+                this.style.background = '';
+            }, 1500);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LudoShop — La boutique des joueurs (sérieux)</title>
+    <title>LudoSexShop — La boutique des joueurs (sérieux)</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <div class="logo-die">
                     <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
                 </div>
-                LudoShop
+                LudoSexShop
             </a>
             <ul class="nav-links">
                 <li><a href="catalogue.php">Catalogue</a></li>
@@ -458,8 +458,8 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
-        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
-        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
+        <div class="logo" style="font-size:17px">🎲 LudoSexShop</div>
+        <p class="footer-copy">© 2026 LudoSexShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
         <nav class="footer-links">
             <a href="#">À propos</a>
             <a href="#">CGV</a>

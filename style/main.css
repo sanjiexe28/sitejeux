@@ -1313,3 +1313,22 @@ img { display: block; max-width: 100%; }
 .summary-total {
     font-weight: bold;
 }
+
+/* ===========================
+   FILTRES CATALOGUE
+=========================== */
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: white;
+}

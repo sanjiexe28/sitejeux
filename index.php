@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LudoShop — La boutique des joueurs (sérieux)</title>
+    <title>LudoSexShop — La boutique des joueurs (sérieux)</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -12,28 +12,28 @@
 <header>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <div class="logo-die">
                     <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
                 </div>
-                LudoShop
+                LudoSexShop
             </a>
             <ul class="nav-links">
-                <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
-                <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
-                <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="catalogue.php">Catalogue</a></li>
+                <li><a href="catalogue.php?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="catalogue.php?cat=jdr">Jeux de rôle</a></li>
+                <li><a href="catalogue.php?cat=figurines">Figurines</a></li>
+                <li><a href="forum.php">Forum</a></li>
             </ul>
             <div class="nav-right">
                 <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
                 <button class="icon-btn" title="Mes envies">♡</button>
-                <a href="panier.html"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
+                <a href="panier.php"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
                     🛒
                     <span class="cart-badge">3</span></a>
                 </button>
-                <a href="connexion.html"><button class="btn-nav">Connexion</button></a>
-                <a href="inscription.html"><button class="btn-nav">Inscription</button></a>
+                <a href="connexion.php"><button class="btn-nav">Connexion</button></a>
+                <a href="inscription.php"><button class="btn-nav">Inscription</button></a>
             </div>
         </div>
     </nav>
@@ -74,27 +74,27 @@
                 Jeux de plateau, JDR, figurines &amp; extensions. Livrés en 48h.
             </p>
             <div class="hero-ctas">
-                <a href="catalogue.html"><button class="btn btn-gold">Explorer le catalogue</button></a>
-                <a href="catalogue.html?cat=nouveautes"><button class="btn btn-ghost">Nouveautés →</button></a>
+                <a href="catalogue.php"><button class="btn btn-gold">Explorer le catalogue</button></a>
+                <a href="catalogue.php?cat=nouveautes"><button class="btn btn-ghost">Nouveautés →</button></a>
             </div>
         </div>
 
         <div class="hero-cards">
-            <a href="produit.html?id=1" class="hero-game-card">
+            <a href="produit.php?id=1" class="hero-game-card">
                 <div class="hero-card-thumb" style="background:#E8DCC8">🏚️</div>
                 <div class="hero-card-info">
                     <div class="hero-card-name">Cryptes de Vaelthar</div>
                     <div class="hero-card-price">42,90 €</div>
                 </div>
             </a>
-            <a href="produit.html?id=2" class="hero-game-card">
+            <a href="produit.php?id=2" class="hero-game-card">
                 <div class="hero-card-thumb" style="background:#C8D8E8">⚖️</div>
                 <div class="hero-card-info">
                     <div class="hero-card-name">Marchands de Sorvane</div>
                     <div class="hero-card-price">34,90 €</div>
                 </div>
             </a>
-            <a href="produit.html?id=3" class="hero-game-card">
+            <a href="produit.php?id=3" class="hero-game-card">
                 <div class="hero-card-thumb" style="background:#D8C8E8">📜</div>
                 <div class="hero-card-info">
                     <div class="hero-card-name">Légendes de Phaëdros</div>
@@ -137,27 +137,27 @@
             </h2>
         </div>
         <div class="cat-grid">
-            <a href="catalogue.html?cat=plateau" class="cat-card">
+            <a href="catalogue.php?cat=plateau" class="cat-card">
                 <div class="cat-icon">♟️</div>
                 <div class="cat-name">Jeux de plateau</div>
                 <div class="cat-nb">842 références</div>
             </a>
-            <a href="catalogue.html?cat=jdr" class="cat-card">
+            <a href="catalogue.php?cat=jdr" class="cat-card">
                 <div class="cat-icon">🐲</div>
                 <div class="cat-name">Jeux de rôle</div>
                 <div class="cat-nb">367 références</div>
             </a>
-            <a href="catalogue.html?cat=figurines" class="cat-card">
+            <a href="catalogue.php?cat=figurines" class="cat-card">
                 <div class="cat-icon">⚔️</div>
                 <div class="cat-name">Figurines</div>
                 <div class="cat-nb">1 240 références</div>
             </a>
-            <a href="catalogue.html?cat=cartes" class="cat-card">
+            <a href="catalogue.php?cat=cartes" class="cat-card">
                 <div class="cat-icon">🃏</div>
                 <div class="cat-name">Jeux de cartes</div>
                 <div class="cat-nb">520 références</div>
             </a>
-            <a href="catalogue.html?cat=extensions" class="cat-card">
+            <a href="catalogue.php?cat=extensions" class="cat-card">
                 <div class="cat-icon">🧩</div>
                 <div class="cat-name">Extensions</div>
                 <div class="cat-nb">680 références</div>
@@ -176,7 +176,7 @@
                 <div class="title-icon">✨</div>
                 Dernières arrivées
             </h2>
-            <a href="catalogue.html?cat=nouveautes" class="link-all">Tout voir →</a>
+            <a href="catalogue.php?cat=nouveautes" class="link-all">Tout voir →</a>
         </div>
         <div class="product-grid">
 
@@ -278,7 +278,7 @@
                 <div class="title-icon">🔥</div>
                 Les plus populaires
             </h2>
-            <a href="catalogue.html?sort=popularite" class="link-all">Tout voir →</a>
+            <a href="catalogue.php?sort=popularite" class="link-all">Tout voir →</a>
         </div>
         <div class="product-grid">
 
@@ -382,7 +382,7 @@
                     Parrainez un ami à l'inscription : +200 points pour vous deux. Votre ami vous pardonnera d'avoir fait ça.
                 </div>
             </div>
-            <a href="fidelite.html"><button class="btn-fidelity">Voir mes points</button></a>
+            <a href="fidelite.php"><button class="btn-fidelity">Voir mes points</button></a>
         </div>
     </div>
 </section>
@@ -397,11 +397,11 @@
                 <div class="title-icon">💬</div>
                 La communauté en parle
             </h2>
-            <a href="forum.html" class="link-all">Accéder au forum →</a>
+            <a href="forum.php" class="link-all">Accéder au forum →</a>
         </div>
         <div class="forum-grid">
 
-            <a href="forum.html" class="forum-card">
+            <a href="forum.php" class="forum-card">
                 <div class="forum-card-head" style="background:#E8D8CC">🗣️</div>
                 <div class="forum-card-body">
                     <span class="forum-tag">Conseils</span>
@@ -414,7 +414,7 @@
                 </div>
             </a>
 
-            <a href="forum.html" class="forum-card">
+            <a href="forum.php" class="forum-card">
                 <div class="forum-card-head" style="background:#CCE0E8">🎨</div>
                 <div class="forum-card-body">
                     <span class="forum-tag">Peinture</span>
@@ -427,7 +427,7 @@
                 </div>
             </a>
 
-            <a href="forum.html" class="forum-card">
+            <a href="forum.php" class="forum-card">
                 <div class="forum-card-head" style="background:#D8CCE8">🎲</div>
                 <div class="forum-card-body">
                     <span class="forum-tag">JDR</span>
@@ -458,13 +458,13 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
-        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
-        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
+        <div class="logo" style="font-size:17px">🎲 LudoSexShop</div>
+        <p class="footer-copy">© 2026 LudoSexShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
         <nav class="footer-links">
             <a href="#">À propos</a>
             <a href="#">CGV</a>
             <a href="#">Contact</a>
-            <a href="forum.html">Forum</a>
+            <a href="forum.php">Forum</a>
         </nav>
     </div>
 </footer>

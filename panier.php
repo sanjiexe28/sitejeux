@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon panier — LudoShop</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<!-- NAVBAR CORRIGÉE -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-die">
+                    <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
+                </div>
+                LudoShop
+            </a>
+            <ul class="nav-links">
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
+                <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <div class="nav-right">
+                <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
+                <button class="icon-btn" title="Mes envies">♡</button>
+                <a href="panier.html"><button class="icon-btn" title="Mon panier (plein comme d'hab)">
+                    🛒
+                    <span class="cart-badge">3</span></a>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- PANIER -->
+<section class="section">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">
+                🛒 Mon panier
+            </h2>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- PRODUITS -->
+            <div class="cart-items">
+
+                <div class="cart-item">
+                    <div class="cart-thumb">🏚️</div>
+
+                    <div class="cart-info">
+                        <div class="cart-name">Cryptes de Vaelthar</div>
+                        <div class="cart-desc">Dungeon Crawler</div>
+
+                        <div class="cart-actions">
+                            <input type="number" value="1" min="1">
+                            <button class="btn-remove">Supprimer</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-price">42,90 €</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-thumb">⚖️</div>
+
+                    <div class="cart-info">
+                        <div class="cart-name">Marchands de Sorvane</div>
+                        <div class="cart-desc">Négo & trahison</div>
+
+                        <div class="cart-actions">
+                            <input type="number" value="2" min="1">
+                            <button class="btn-remove">Supprimer</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-price">69,80 €</div>
+                </div>
+
+            </div>
+
+            <!-- RÉSUMÉ -->
+            <div class="cart-summary">
+                <h3>Résumé</h3>
+
+                <div class="summary-line">
+                    <span>Sous-total</span>
+                    <span>112,70 €</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Livraison</span>
+                    <span>Offerte</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>112,70 €</span>
+                </div>
+
+                <button class="btn btn-gold" style="width:100%">
+                    Commander
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
+        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la rédaction de ce site.</p>
+        <nav class="footer-links">
+            <a href="#">À propos</a>
+            <a href="#">CGV</a>
+            <a href="#">Contact</a>
+            <a href="forum.html">Forum</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+
+</body>
+</html>

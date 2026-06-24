@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Inscription — LudoShop</title>
+    <title>Inscription — LudoSexShop</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <div class="logo-die">
                     <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
                 </div>
-                LudoShop
+                LudoSexShop
             </a>
 
             <ul class="nav-links">
@@ -88,8 +88,8 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
-        <div class="logo" style="font-size:17px">🎲 LudoShop</div>
-        <p class="footer-copy">© 2026 LudoShop — Aucun joueur n'a été blessé lors de la création du site.</p>
+        <div class="logo" style="font-size:17px">🎲 LudoSexShop</div>
+        <p class="footer-copy">© 2026 LudoSexShop — Aucun joueur n'a été blessé lors de la création du site.</p>
         <nav class="footer-links">
             <a href="#">À propos</a>
             <a href="#">CGV</a>

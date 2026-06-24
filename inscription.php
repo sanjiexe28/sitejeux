@@ -11,7 +11,7 @@
 <header>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <div class="logo-die">
                     <span class="shake-die" id="shake-die" title="Lancez le dé !">🎲</span>
                 </div>
@@ -19,17 +19,17 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="catalogue.html?cat=nouveautes">Nouveautés</a></li>
-                <li><a href="catalogue.html?cat=jdr">Jeux de rôle</a></li>
-                <li><a href="catalogue.html?cat=figurines">Figurines</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="catalogue.php">Catalogue</a></li>
+                <li><a href="catalogue.php?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="catalogue.php?cat=jdr">Jeux de rôle</a></li>
+                <li><a href="catalogue.php?cat=figurines">Figurines</a></li>
+                <li><a href="forum.php">Forum</a></li>
             </ul>
 
             <div class="nav-right">
                 <input class="search-input" type="text" placeholder='Ex : "jeu où je peux gagner"…'>
                 <button class="icon-btn" title="Mes envies">♡</button>
-                <a href="panier.html">
+                <a href="panier.php">
                     <button class="icon-btn" title="Mon panier">
                         🛒 <span class="cart-badge">3</span>
                     </button>
@@ -77,7 +77,7 @@
 
             <p class="auth-link">
                 Déjà un compte ?
-                <a href="connexion.html">Se connecter</a>
+                <a href="connexion.php">Se connecter</a>
             </p>
 
         </div>
@@ -94,7 +94,7 @@
             <a href="#">À propos</a>
             <a href="#">CGV</a>
             <a href="#">Contact</a>
-            <a href="forum.html">Forum</a>
+            <a href="forum.php">Forum</a>
         </nav>
     </div>
 </footer>
